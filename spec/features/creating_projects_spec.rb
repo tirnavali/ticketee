@@ -11,5 +11,7 @@ RSpec.feature "Users can create new projects", :type => :feature do
 		click_button "Create Project"
 
 		expect(page).to have_content "Project has been created."
+		title = "Sublime Text 3 - Projects - Ticketee"
+		expect(page).to have_title title
 	end
 end
